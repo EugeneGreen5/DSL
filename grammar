@@ -1,0 +1,6 @@
+expression: VAR VAR_NAME SIGN expression
+          : summand (( PLUS OR MINUS ) summand)*
+summand : factor (( MUL OR DIV) factor) *
+factor  : INT | FLOAT
+        : (PLUS | MINUS) factor
+        : LPAREN expression RPAREN
